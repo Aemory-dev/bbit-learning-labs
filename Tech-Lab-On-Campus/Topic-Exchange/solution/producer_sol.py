@@ -30,7 +30,7 @@ class mqProducer(mqProducerInterface):
 
         # Create the exchange if not already present
         if self.exchange == -1:
-            self.exchange = self.channel.exchange_declare(exchange=self.exchange_name, exchange_type="topic")
+            self.exchange = self.channel.exchange_declare(exchange=self.exchange_name)
 
 
     def publishOrder(self, message: str) -> None:
